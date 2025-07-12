@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Your Name",
+  "classifications": [ "Web", "API", "Clean Architecture" ],
+  "identity": "YourCompany.YourTemplate",
+  "name": "My .NET Project Template",
+  "shortName": "mytemplate",
+  "sourceName": "AmmarDragon",
+  "defaultName": "NewProject",
+  "preferNameDirectory": true
+}
