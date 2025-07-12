@@ -1,4 +1,4 @@
-﻿namespace Core.Todos;
+﻿namespace Domain.Todos;
 
 public enum Priority
 {

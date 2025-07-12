@@ -1,5 +1,5 @@
-﻿using Core.Todos;
-using Core.Users;
+﻿using Domain.Todos;
+using Domain.Users;
 
 namespace Application.Todos.Create;
 

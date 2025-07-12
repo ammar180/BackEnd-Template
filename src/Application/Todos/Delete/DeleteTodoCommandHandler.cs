@@ -1,5 +1,5 @@
 ﻿using System.Net.Http.Headers;
-using Core.Todos;
+using Domain.Todos;
 using Microsoft.EntityFrameworkCore;
 
 namespace Application.Todos.Delete;

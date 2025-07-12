@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using SharedKernel;
 
-namespace Core.Users;
+namespace Domain.Users;
 
 public sealed class User : Entity
 {

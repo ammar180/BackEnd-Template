@@ -1,5 +1,5 @@
 ﻿using Application.Users.GetById;
-using Core.Users;
+using Domain.Users;
 
 namespace Application.Users;
 internal class UserService : IUserService

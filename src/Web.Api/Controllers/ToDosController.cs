@@ -3,7 +3,7 @@ using Application.Todos.Create;
 using Application.Todos.Delete;
 using Application.Todos.Get;
 using Application.Todos.GetById;
-using Core.Todos;
+using Domain.Todos;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using SharedKernel;

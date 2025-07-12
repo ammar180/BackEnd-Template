@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using MediatR;
-using Core.Todos;
+using Domain.Todos;
 
 namespace Application.Todos.Events;
 

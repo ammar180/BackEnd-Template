@@ -1,6 +1,6 @@
 ﻿using Application.Todos.Create;
-using Core.Todos;
-using Core.Users;
+using Domain.Todos;
+using Domain.Users;
 using FluentAssertions;
 using NSubstitute;
 using SharedKernel;

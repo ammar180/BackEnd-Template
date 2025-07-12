@@ -1,4 +1,4 @@
-﻿using Core.Todos;
+﻿using Domain.Todos;
 using Microsoft.EntityFrameworkCore;
 
 namespace Application.Todos.Get;

@@ -1,5 +1,5 @@
 ﻿using SharedKernel;
 
-namespace Core.Todos;
+namespace Domain.Todos;
 
 public sealed record TodoItemCompletedDomainEvent(int TodoItemId) : IDomainEvent;

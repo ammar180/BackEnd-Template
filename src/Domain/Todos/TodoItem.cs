@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using SharedKernel;
 
-namespace Core.Todos;
+namespace Domain.Todos;
 
 public class TodoItem : Entity
 {

@@ -1,4 +1,4 @@
-﻿using Core.Users;
+﻿using Domain.Users;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using SharedKernel;
