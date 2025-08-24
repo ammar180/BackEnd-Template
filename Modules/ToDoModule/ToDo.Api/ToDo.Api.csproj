@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+	  <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+	  <PackageReference Include="Swashbuckle.AspNetCore" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+	<ProjectReference Include="..\..\..\Core\Core.csproj" />
+    <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+  </ItemGroup>
+
+	<Target Name="CopyPluginToSolutionBuildDevFolder" AfterTargets="Build">
+		<PropertyGroup>
+			<PluginDestination>$(SolutionDir)plugins\</PluginDestination>
+		</PropertyGroup>
+		<ItemGroup>
+			<PluginOutputFiles Include="$(TargetDir)*.dll;$(TargetDir)*.pdb" />
+		</ItemGroup>
+		<Copy SourceFiles="@(PluginOutputFiles)" DestinationFolder="$(PluginDestination)" SkipUnchangedFiles="true" />
+	</Target>
+
+</Project>
