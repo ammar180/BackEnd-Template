@@ -27,8 +27,9 @@ public class EfRepository<T>(ApplicationDbContext dbContext)
         return await _dbContext.Set<T>().FindAsync([id], cancellationToken: cancellation);
     }
 
-    public async Task<T?> GetFirstOrDefaultAsync(IQueryable<T> query, string[]? includes = null, CancellationToken cancellation = default)
+    public async Task<T?> GetFirstOrDefaultAsync(IQueryable<T>? query = null, string[]? includes = null, CancellationToken cancellation = default)
     {
+        query ??= Query;
         if (includes != null)
         {
             foreach (string include in includes)
@@ -40,8 +41,9 @@ public class EfRepository<T>(ApplicationDbContext dbContext)
         return await query.FirstOrDefaultAsync(cancellation);
     }
 
-    public async Task<List<T>> GetListAsync(IQueryable<T> query, string[]? includes = null, CancellationToken cancellation = default)
+    public async Task<List<T>> GetListAsync(IQueryable<T>? query = null, string[]? includes = null, CancellationToken cancellation = default)
     {
+        query ??= Query;
         if (includes != null)
         {
             foreach (string include in includes)

@@ -1,3 +1,5 @@
-﻿namespace Application.Todos.Complete;
+﻿using SharedKernel.Messaging;
 
-public sealed record CompleteTodoCommand(int TodoItemId) : IRequest<Result>;
+namespace Application.Todos.Complete;
+
+public sealed record CompleteTodoCommand(int TodoItemId) : ICommand;

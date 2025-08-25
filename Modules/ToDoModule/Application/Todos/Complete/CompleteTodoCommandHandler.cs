@@ -1,10 +1,10 @@
 ﻿using Domain.Todos;
-using Microsoft.EntityFrameworkCore;
+using SharedKernel.Messaging;
 
 namespace Application.Todos.Complete;
 
 internal sealed class CompleteTodoCommandHandler(IRepository<TodoItem> _repo)
-    : IRequestHandler<CompleteTodoCommand, Result>
+    : ICommandHandler<CompleteTodoCommand>
 {
     public async Task<Result> Handle(CompleteTodoCommand command, CancellationToken cancellationToken)
     {
