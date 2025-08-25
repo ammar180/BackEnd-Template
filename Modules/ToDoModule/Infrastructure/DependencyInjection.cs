@@ -17,6 +17,7 @@ public static class DependencyInjection
     private static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration configuration)
     {
         string? connectionString = configuration.GetConnectionString("Database");
+        Console.WriteLine(connectionString);
 
         services.AddDbContext<ApplicationDbContext>(
             options => options.UseSqlServer(connectionString));

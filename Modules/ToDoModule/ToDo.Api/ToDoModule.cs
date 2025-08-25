@@ -8,8 +8,6 @@ public class TicketModule : Module
 {
     public override void RegisterServices(IServiceCollection services, IConfiguration configuration)
     {
-        services.AddSwaggerGenWithAuth();
-
         services
             .AddApplication()
             .AddPresentation()
@@ -19,5 +17,17 @@ public class TicketModule : Module
 
     protected override void ConfigModuleWebApplication(WebApplication app)
     {
+        if (app.Environment.IsDevelopment())
+        {
+            app.ApplyMigrations();
+        }
+
+        app.UseRequestContextLogging();
+
+        app.UseExceptionHandler();
+
+        app.UseAuthentication();
+
+        app.UseAuthorization();
     }
 }

@@ -1,3 +1,4 @@
+using API.Extensions;
 using Core;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 
@@ -18,6 +19,8 @@ foreach (var module in modules)
     builder.Services.AddControllers()
         .PartManager.ApplicationParts.Add(new AssemblyPart(moduleAssembly));
 }
+
+builder.Services.AddSwaggerGenWithAuth();
 
 var app = builder.Build();
 

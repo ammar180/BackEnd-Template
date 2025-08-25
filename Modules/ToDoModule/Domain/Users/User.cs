@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using SharedKernel;
+﻿using SharedKernel;
 
 namespace Domain.Users;
 
